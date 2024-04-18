@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="owner.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Owner Dashboard</h2>
+        <button onclick="toggleForm()">Add New Property</button>
+        <div id="property-form" style="display:none;">
+            <input type="text" id="property-name" placeholder="Property Name">
+            <input type="text" id="location" placeholder="Location">
+            <textarea id="description" placeholder="Property Description"></textarea>
+            <select id="availability">
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+            <input type="file" id="file-input" multiple accept=".png, .jpg, .jpeg, .webp" onchange="previewFiles()">
+            <div id="image-preview"></div>
+            <button onclick="addProperty()">Submit Property</button>
+        </div>
+        <ul id="properties"></ul>
+    </div>
+    <script src="owner.js"></script>
+</body>
+</html>

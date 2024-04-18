@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Properties Listing</h1>
+        <div class="sort-buttons">
+            <button onclick="sortProperties('asc')">Sort Ascending</button>
+            <button onclick="sortProperties('desc')">Sort Descending</button>
+        </div>
+        
+        <!-- Search bar -->
+        <input type="text" id="searchBar" placeholder="Search properties..." oninput="filterProperties()">
+
+        <ul id="property-list">
+            <li onclick="showDetails(this)">Property 1 - $100,000</li>
+            <li onclick="showDetails(this)">Property 2 - $150,000</li>
+            <!-- Add more properties as needed -->
+        </ul>
+        <div id="details" style="display:none;">
+            <h2>Details</h2>
+            <p id="detailName">Name:</p>
+            <p id="detailLocation">Location:</p>
+            <p id="detailContact">Contact:</p>
+            <button onclick="hideDetails()">Close Details</button>
+        </div>
+    </div>
+
+    <script src="employee.js"></script>
+</body>
+</html>
